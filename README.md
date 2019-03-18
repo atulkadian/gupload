@@ -17,7 +17,7 @@ Know more about [Google Drive API](https://developers.google.com/drive/api/v3/qu
 - uritemplate>=3.0.0
 - urllib3>=1.23
 
-**Just type `sudo -H pip3 install -r requirements.txt` to install all requirements.**
+**Just type `sudo -H pip install -r requirements.txt` to install all requirements.**
 
 # Usage:
 - Type `python up.py`
