@@ -1,3 +1,4 @@
+# Copyright (C) 2019 Atul Kadian
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -47,7 +48,7 @@ def create_token_file(token_file):
 			redirect_uri=REDIRECT_URI
 			)
 	authorize_url = flow.step1_get_authorize_url()
-	print('\nToken file doesn\'t exist.\nSur you need to go to this URL to complete the authentication :\n\n' + authorize_url)
+	print('\nToken file doesn\'t exist.\nYou need to go to this URL to complete the authentication :\n\n' + authorize_url)
 	code = raw_input('\nEnter verification code: ')
 	credentials = flow.step2_exchange(code)
 	storage = Storage(token_file)
@@ -96,8 +97,8 @@ def upload_file(file_path, file_name, mime_type):
 	download_url = file.get('webContentLink')
 	return download_url
 
-if __name__ == '__main__':
-	file_path = raw_input("Enter the file name sur : ")
+def gupload():
+	file_path = raw_input("Enter the file name : ")
 	try:
 		with open(file_path) as f: pass
 	except IOError as e:
@@ -114,9 +115,10 @@ if __name__ == '__main__':
 	# Sometimes API fails to retrieve starting URI, we wrap it.
 	try:
 		print("\nHere is the GDrive link of the file with share permissions invoked : \n"+upload_file(file_path, file_name, mime_type))
-		print("\nNow we drink *_*")
 	except ResumableUploadError as e:
 		print("Error occured while first upload try:", e)
 		print("Trying one more time.")
 		print(upload_file(file_path, file_name, mime_type))
 
+if __name__ == '__main__':
+    gupload()
