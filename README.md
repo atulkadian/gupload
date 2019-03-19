@@ -9,6 +9,7 @@ Know more about [Google Drive API](https://developers.google.com/drive/api/v3/qu
 - httplib2>=0.11.3
 - more-itertools>=4.2.0
 - ndg-httpsclient>=0.4.0
+- oauth2client
 - oauth>=1.0.1
 - pyasn1>=0.4.3
 - pyasn1-modules>=0.2.1
