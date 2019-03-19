@@ -12,8 +12,6 @@ Know more about [Google Drive API](https://developers.google.com/drive/api/v3/qu
 - oauth>=1.0.1
 - pyasn1>=0.4.3
 - pyasn1-modules>=0.2.1
-- pycurl>=7.43.0
-- pydns>=2.3.6
 - uritemplate>=3.0.0
 - urllib3>=1.23
 
