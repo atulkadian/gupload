@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # Copyright (C) 2019 Atul Kadian
 import sys
 reload(sys)

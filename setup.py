@@ -28,6 +28,12 @@ setup(
     author_email = "atul2143143@gmail.com",
     url = "https://github.com/AtulKadian/gupload",
     license = "GPL",
+    entry_points = {
+        'console_scripts': [
+            'gupload = gupload:gupload'
+        ]
+    },
+
     packages = find_packages(),
     install_requires = [
         "google-api-python-client>=1.7.3",
@@ -43,5 +49,5 @@ setup(
         "uritemplate>=3.0.0",
         "urllib3>=1.23",
     ],
-    python_requires = '2.7',
+    python_requires = '>=2.7, <3.0',
 )
